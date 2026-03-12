@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="P5JiPq3XBxf3x8YYsD-neCuTlW81e9OnbW2RzQpAlDg" />
+    
+    <title>FAQ - Questions fréquentes | MK Support</title>
+    <meta name="description" content="Toutes les réponses à vos questions sur mes services RH et administratifs : tarifs, télétravail, engagement, outils utilisés.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1e3a5f;
+            --or: #c9a84c;
+            --white: #ffffff;
+            --cream: #fafaf8;
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a5e;
+            --text-light: #6e6e80;
+            --border: #e8e8e6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        h1, h2 { font-family: 'Cormorant Garamond', serif; }
+
+        header {
+            background: var(--white);
+            padding: 1.6rem 2.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--or); }
+
+        .hero-faq {
+            background: var(--cream);
+            padding: 6rem 2.5rem 4rem;
+            text-align: center;
+        }
+
+        .hero-faq h1 {
+            font-size: 3rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .hero-faq p {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2.5rem;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.8rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--cream);
+        }
+
+        .faq-question h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--or);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 2rem 2rem 2rem;
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .cta-section {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem 2.5rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--or);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #b5933e;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-faq h1 { font-size: 2rem; }
+            .faq-question { padding: 1.5rem; }
+            .faq-question h3 { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">MK <span>Support</span></a>
+        <a href="index.html#contact" class="btn">Me contacter</a>
+    </nav>
+</header>
+
+<section class="hero-faq">
+    <h1>Questions fréquentes</h1>
+    <p>Toutes les réponses aux questions que vous vous posez sur mes services</p>
+</section>
+
+<div class="faq-container">
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Travaillez-vous à distance ou sur site ?</h3>
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                Je travaille principalement en <strong>télétravail</strong>, ce qui me permet d'être flexible et réactive. Je peux également me déplacer chez vous si besoin, notamment à <strong>Nantes, Lorient, et dans toute la Bretagne et les Pays de la Loire</strong>.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Comment se passe la facturation ?</h3>
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                Je facture mes prestations soit <strong>au forfait</strong> (pour des missions définies) soit <strong>au temps passé</strong> (pour un accompagnement régulier). Chaque mission fait l'objet d'un <strong>devis clair</strong> avant démarrage. Aucun engagement longue durée n'est exigé.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Travaillez-vous avec les TPE et PME ?</h3>
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                Oui, absolument ! Je me spécialise justement dans l'accompagnement des <strong>TPE, PME et micro-entreprises</strong> qui n'ont pas les moyens ou le besoin d'avoir un service RH et administratif en interne. Mon objectif est de vous apporter l'expertise des grands groupes, adaptée à votre taille.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Peut-on faire appel à vous pour une mission ponctuelle ?</h3>
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                Oui ! Je propose des interventions <strong>ponctuelles</strong> (pour un recrutement, un pic d'activité, une réorganisation) ou <strong>régulières</strong> (quelques jours par mois). Vous choisissez la formule qui vous convient, sans engagement.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Quels outils utilisez-vous ?</h3>
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                Je m'adapte à <strong>vos outils existants</strong> (Excel, Google Sheets, logiciels métier). Si besoin, je peux vous proposer des outils simples et efficaces pour améliorer votre organisation : Trello, Notion, Google Drive, etc. L'objectif est de simplifier, pas de compliquer !
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Faut-il s'engager sur une durée minimale ?</h3>
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <strong>Non, aucun engagement.</strong> Vous pouvez faire appel à moi pour une mission ponctuelle d'une semaine comme pour un accompagnement de plusieurs mois. Nous adaptons la collaboration à vos besoins réels.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Quels sont vos tarifs ?</h3>
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                Mes tarifs varient selon la nature et la durée de la mission. Après un premier échange pour comprendre votre besoin, je vous propose un <strong>devis personnalisé et transparent</strong>. Contactez-moi pour en discuter !
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Dans quels secteurs d'activité intervenez-vous ?</h3>
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                J'interviens dans <strong>tous les secteurs</strong> : commerce, industrie, services, BTP, santé, etc. Mon expérience dans les grands groupes (énergie, transport, services publics) me permet de m'adapter rapidement à tout type d'organisation.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Gérez-vous la paie et les contrats de travail ?</h3>
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                <strong>Non, je ne gère pas la paie ni la rédaction des contrats de travail</strong> (ce sont des missions juridiques et comptables). En revanche, je coordonne avec votre expert-comptable ou juriste pour préparer les éléments nécessaires et assurer le suivi administratif.
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="cta-section">
+    <h2>Vous avez une autre question ?</h2>
+    <p>N'hésitez pas à me contacter, je vous réponds rapidement !</p>
+    <a href="index.html#contact" class="btn">Prendre contact</a>
+</section>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', function() {
+            const item = this.parentElement;
+            const wasActive = item.classList.contains('active');
+            
+            // Fermer tous les autres
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            
+            // Ouvrir celui-ci si il n'était pas déjà ouvert
+            if (!wasActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

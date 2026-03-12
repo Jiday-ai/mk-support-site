@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="P5JiPq3XBxf3x8YYsD-neCuTlW81e9OnbW2RzQpAlDg" />
+    
+    <title>Comment je travaille | MK Support</title>
+    <meta name="description" content="Découvrez ma méthode de travail et comment se passe une collaboration avec MK Support : du premier échange au suivi régulier.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1e3a5f;
+            --or: #c9a84c;
+            --white: #ffffff;
+            --cream: #fafaf8;
+            --or-pale: rgba(201, 168, 76, 0.08);
+            --text-dark: #1a1a2e;
+            --text-mid: #4a4a5e;
+            --text-light: #6e6e80;
+            --border: #e8e8e6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
+
+        header {
+            background: var(--white);
+            padding: 1.6rem 2.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--or); }
+
+        .hero {
+            background: var(--cream);
+            padding: 6rem 2.5rem 4rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .process-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 5rem 2.5rem;
+        }
+
+        .process-step {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 2rem;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 39px;
+            top: 80px;
+            width: 2px;
+            height: calc(100% - 40px);
+            background: var(--border);
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--or-pale);
+            border: 3px solid var(--or);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--or);
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 1.6rem;
+            color: var(--navy);
+            margin-bottom: 0.8rem;
+        }
+
+        .step-content p {
+            color: var(--text-mid);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .step-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-content li {
+            padding: 0.5rem 0;
+            color: var(--text-mid);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .step-content li::before {
+            content: '→';
+            color: var(--or);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .cta-section {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem 2.5rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--or);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #b5933e;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .process-step {
+                grid-template-columns: 60px 1fr;
+                gap: 1.5rem;
+            }
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            .process-step:not(:last-child)::after {
+                left: 29px;
+                top: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">MK <span>Support</span></a>
+        <a href="index.html#contact" class="btn">Me contacter</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Comment je travaille</h1>
+    <p>Une méthode simple et claire pour que vous sachiez exactement comment va se passer notre collaboration</p>
+</section>
+
+<div class="process-container">
+    <div class="process-step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+            <h3>Premier échange</h3>
+            <p>Nous prenons le temps de discuter de votre situation et de vos besoins, sans engagement. L'objectif : comprendre vraiment votre quotidien et vos enjeux.</p>
+            <ul>
+                <li>Échange téléphonique ou visio (30 minutes)</li>
+                <li>Compréhension de votre besoin</li>
+                <li>Analyse rapide de votre situation</li>
+                <li>Premier diagnostic (gratuit)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="process-step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+            <h3>Proposition d'accompagnement</h3>
+            <p>Je vous envoie une proposition claire qui définit précisément ce que je vais faire pour vous, comment, et à quel coût.</p>
+            <ul>
+                <li>Définition précise des missions</li>
+                <li>Planning prévisionnel</li>
+                <li>Devis transparent (forfait ou temps passé)</li>
+                <li>Aucune surprise, tout est écrit</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="process-step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+            <h3>Mise en place de la collaboration</h3>
+            <p>Nous organisons le démarrage de la mission ensemble pour que tout soit fluide dès le premier jour.</p>
+            <ul>
+                <li>Organisation des échanges (télétravail ou présentiel)</li>
+                <li>Accès aux outils nécessaires</li>
+                <li>Planification des premiers jalons</li>
+                <li>Démarrage opérationnel rapide</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="process-step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+            <h3>Suivi et ajustement</h3>
+            <p>La collaboration évolue avec vos besoins. Nous faisons régulièrement le point pour ajuster si nécessaire.</p>
+            <ul>
+                <li>Points réguliers (hebdo, mensuel selon besoin)</li>
+                <li>Amélioration continue des process</li>
+                <li>Adaptation aux évolutions de votre activité</li>
+                <li>Communication transparente et réactive</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section class="cta-section">
+    <h2>Prêt à démarrer ?</h2>
+    <p>Discutons de votre projet lors d'un premier échange, sans engagement</p>
+    <a href="index.html#contact" class="btn">Prendre contact</a>
+</section>
+
+</body>
+</html>
