@@ -1182,7 +1182,9 @@
 <!-- HEADER -->
 <header id="header">
     <nav>
-        <div class="logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; margin-right: 0.5rem; vertical-align: middle; opacity: 0.6;"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>MK <span>Support</span></div>
+        <a href="#header" class="logo-link" style="text-decoration: none; display: flex; align-items: center;">
+            <img src="logo-mk-transparent.png" alt="MK Support" class="logo-img" style="height: 45px; width: auto;">
+        </a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
             <span></span>
             <span></span>
@@ -1883,7 +1885,9 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-brand">
-            <a href="#header" class="logo" style="text-decoration: none; color: inherit; cursor: pointer; display: block; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">MK <span>Support</span></a>
+            <a href="#header" class="logo" style="text-decoration: none; cursor: pointer; display: block; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                <img src="logo-mk-transparent.png" alt="MK Support" style="height: 40px; width: auto;">
+            </a>
             <p>Consultante RH & Back Office — accompagnement des entrepreneurs et petites entreprises.</p>
         </div>
         <div class="footer-col">
@@ -2090,6 +2094,60 @@
         <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
 </button>
+
+<!-- Bandeau Cookies RGPD -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, #1e3a5f 0%, #2a4a75 100%); color: white; padding: 1.5rem 2rem; box-shadow: 0 -4px 20px rgba(0,0,0,0.2); z-index: 10000; display: none;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px;">
+            <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
+                🍪 Nous utilisons des cookies pour améliorer votre expérience de navigation. 
+                En continuant, vous acceptez notre <a href="confidentialite.html" style="color: #c9a84c; text-decoration: underline;">politique de confidentialité</a>.
+            </p>
+        </div>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button onclick="acceptCookies()" style="background: #c9a84c; color: white; border: none; padding: 0.7rem 1.8rem; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 0.9rem; transition: all 0.3s;">
+                Accepter
+            </button>
+            <button onclick="refuseCookies()" style="background: transparent; color: white; border: 2px solid white; padding: 0.7rem 1.8rem; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 0.9rem; transition: all 0.3s;">
+                Refuser
+            </button>
+            <button onclick="closeCookieBanner()" style="background: transparent; color: rgba(255,255,255,0.7); border: none; padding: 0.7rem 1.2rem; cursor: pointer; font-size: 0.9rem; text-decoration: underline;">
+                Continuer sans accepter
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+// Gestion du bandeau cookies
+function showCookieBanner() {
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    if (!cookieConsent) {
+        document.getElementById('cookie-banner').style.display = 'block';
+    }
+}
+
+function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookie-banner').style.display = 'none';
+    // Ici vous pouvez activer Google Analytics ou autres trackers
+    console.log('Cookies acceptés');
+}
+
+function refuseCookies() {
+    localStorage.setItem('cookieConsent', 'refused');
+    document.getElementById('cookie-banner').style.display = 'none';
+    console.log('Cookies refusés');
+}
+
+function closeCookieBanner() {
+    document.getElementById('cookie-banner').style.display = 'none';
+    // Ne pas enregistrer de préférence, le bandeau réapparaîtra à la prochaine visite
+}
+
+// Afficher le bandeau au chargement de la page
+window.addEventListener('load', showCookieBanner);
+</script>
 
 </body>
 </html>
