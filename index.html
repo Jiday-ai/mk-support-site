@@ -79,7 +79,7 @@
         nav {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0.8rem 2.5rem;
+            padding: 1.6rem 2.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -91,10 +91,10 @@
             font-weight: 600;
             letter-spacing: 4px;
             text-transform: uppercase;
-            color: var(--navy);
+            color: var(--or);
         }
 
-        .logo span { color: var(--or); }
+        .logo span { color: var(--navy); }
 
         .nav-links {
             display: flex;
@@ -1182,9 +1182,7 @@
 <!-- HEADER -->
 <header id="header">
     <nav>
-        <a href="#header" style="text-decoration: none; cursor: pointer;" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
-            <img src="logo-mk-header.png" alt="MK Support" style="height: 120px; width: auto; display: block;">
-        </a>
+        <div class="logo">MK <span>Support</span></div>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
             <span></span>
             <span></span>
